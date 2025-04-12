@@ -1,4 +1,14 @@
 /* Global Styles */
+/* Easy to adjust spacing variables */
+:root {
+    --spacing-xs: 0rem;
+    --spacing-sm: 0rem;
+    --spacing-md: 0rem;
+    --spacing-lg: 0rem;
+    --spacing-xl: 0rem;
+    --header-event-gap: -3rem; /* Set to 0 to remove all space between header and event */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +26,7 @@ body, html {
     width: 98%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 /* Hero Section with Background Image */
@@ -59,7 +69,7 @@ body, html {
 /* Header */
 header {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: var(--header-event-gap); /* ADJUST THIS VALUE to control space below header */
 }
 
 header h1 {
@@ -71,7 +81,8 @@ header h1 {
 
 /* Event Info Section */
 .event-info {
-    margin-bottom: 2rem;
+    margin-top: var(--header-event-gap); /* ADJUST THIS VALUE to control space above event card */
+    margin-bottom: var(--spacing-lg);
 }
 
 .event-info h2 {
