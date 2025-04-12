@@ -1,0 +1,266 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333333; /* Dark gray for body text */
+    height: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Hero Section with Background Image */
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 193, 7, 0.6); /* Semi-transparent warm golden-yellow overlay #FFC107 */
+    z-index: 1;
+    /* Removed mix-blend-mode to ensure text readability */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: auto;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 4px solid #26C6DA; /* Teal accent border */
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #4A2C0B; /* Deep brown for headings */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Event Info Section */
+.event-info {
+    margin-bottom: 3rem;
+}
+
+.event-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #4A2C0B; /* Deep brown for headings */
+    text-align: center;
+}
+
+.event-card {
+    background-color: #FFF8E1; /* Soft cream for secondary backgrounds */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-left: 4px solid #26C6DA; /* Teal accent border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.event-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.event-card p {
+    margin-bottom: 0.8rem;
+}
+
+.event-card .location {
+    font-weight: bold;
+}
+
+.event-card .date-time {
+    color: #4A2C0B; /* Deep brown */
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.event-card .countdown {
+    display: inline-block;
+    font-size: 0.9rem;
+    background-color: #F57C00; /* Vivid orange for timer tag */
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 5px;
+    color: white; /* White text for better contrast */
+}
+
+.event-card .price {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Newsletter Section */
+.newsletter {
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #4A2C0B; /* Deep brown for headings */
+}
+
+#signup-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#email {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #005669; /* Bright teal for buttons */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(38, 198, 218, 0.3); /* Colored shadow for more pop */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+#signup-form .btn {
+    border-radius: 0 4px 4px 0;
+}
+
+.btn:hover {
+    background-color: #005669; /* Darker teal for button hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(38, 198, 218, 0.4);
+}
+
+.btn:hover:before {
+    left: 100%;
+}
+
+.form-message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Footer Styles */
+.site-footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    color: #005669; /* Bright teal for accents */
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.social-icon:hover {
+    color: white;
+    background-color: #005669; /* Bright teal background on hover */
+}
+
+.site-footer p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    #signup-form {
+        flex-direction: column;
+    }
+    
+    #email {
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+    
+    #signup-form .btn {
+        border-radius: 4px;
+    }
+}
