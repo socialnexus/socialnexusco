@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     dateTimeElement.setAttribute('data-original', originalText);
                 }
                 
-                dateTimeElement.innerHTML = `${originalText} <span class="countdown">(${hours}h ${minutes}m from now)</span>`;
+                dateTimeElement.innerHTML = `${originalText}<br><span class="countdown">${hours}h ${minutes}m from now</span>`;
             }
         }
     }
