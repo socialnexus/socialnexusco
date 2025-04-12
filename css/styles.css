@@ -37,7 +37,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 193, 7, 0.6); /* Semi-transparent warm golden-yellow overlay #FFC107 */
+    background-color: rgba(255, 193, 7, 0.4); /* Semi-transparent warm golden-yellow overlay #FFC107 */
     z-index: 1;
     /* Removed mix-blend-mode to ensure text readability */
 }
@@ -82,7 +82,7 @@ header h1 {
 }
 
 .event-card {
-    background-color: #FFF8E1; /* Soft cream for secondary backgrounds */
+    background-color: rgba(255, 248, 225, 0.4); /* Slightly transparent cream for secondary backgrounds */
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
